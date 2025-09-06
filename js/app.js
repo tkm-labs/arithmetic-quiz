@@ -95,3 +95,9 @@ retryBtn.addEventListener('click', () => {
 
 // 初期問題
 generationQuestion();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker registered"))
+    .catch((error) => console.log("SW registration failed:", error));
+}
