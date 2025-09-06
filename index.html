@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>算数クイズ（電卓風）</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f8ff;
+    }
+    .card {
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 15px;
+    }
+    .calc-btn {
+      font-size: 1.5rem;
+      margin: 5px;
+      width: 60px;
+      height: 60px;
+    }
+    #answer {
+      font-size: 2rem;
+      text-align: center;
+      height: 60px;
+      pointer-events: none; /* 直接入力不可 */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5 text-center">
+    <h1 class="text-primary fw-bold mb-4">🎨 足し算・引き算ドリル 🎨</h1>
+
+    <div class="card p-4 shadow-lg">
+        <h2 id="question" class="mb-4 display-5">ここに問題が出るよ</h2>
+        <input type="text" id="answer" class="form-control mb-3" placeholder="0">
+        <div id="calculator" class="d-flex flex-wrap justify-content-center">
+            <button class="btn btn-warning calc-btn">1</button>
+            <button class="btn btn-warning calc-btn">2</button>
+            <button class="btn btn-warning calc-btn">3</button>
+            <button class="btn btn-warning calc-btn">4</button>
+            <button class="btn btn-warning calc-btn">5</button>
+            <button class="btn btn-warning calc-btn">6</button>
+            <button class="btn btn-warning calc-btn">7</button>
+            <button class="btn btn-warning calc-btn">8</button>
+            <button class="btn btn-warning calc-btn">9</button>
+            <button class="btn btn-warning calc-btn">0</button>
+            <button class="btn btn-danger calc-btn">←</button>
+            <button id="ok-btn" class="btn btn-success calc-btn">OK</button>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button id="retry-btn" class="btn btn-primary" style="display:none;">
+                もう一回やる
+            </button>
+        </div>
+        <p id="result" class="mt-3 fs-4 text-info">ここに「せいかい！」「ふせいかい」が出るよ</p>
+        <p class="text-muted" id="progress">3 / 10 問目</p>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
