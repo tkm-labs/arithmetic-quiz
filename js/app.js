@@ -12,8 +12,8 @@ const retryBtn = document.getElementById('retry-btn');
 
 // ランダム問題生成
 function generationQuestion() {
-    let num1 = Math.floor(Math.random() * 20) + 1;
-    let num2 = Math.floor(Math.random() * 20) + 1;
+    let num1 = Math.floor(Math.random() * 10) + 1;
+    let num2 = Math.floor(Math.random() * 10) + 1;
     let operator = Math.random() < 0.5 ? '+' : '-';
     if (operator === '-' && num1 < num2) [num1, num2] = [num2, num1];
 
